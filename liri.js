@@ -5,6 +5,22 @@ var request = require("request");
 const keys = require("./keys.js");
 var fs = require("fs");
 
+//*****
+module.exports = console;
+
+// Include the logger module
+var winston = require('winston');
+// Set up log file. (you can also define size, rotation etc.)
+winston.add(winston.transports.File, { filename: 'somefile.log' });
+// Overwrite some of the build-in console functions
+console.error=winston.error;
+console.log=winston.info;
+console.info=winston.info;
+console.debug=winston.debug;
+console.warn=winston.warn;
+module.exports = console;
+//****
+
 const spotify = new Spotify(keys.spotify);
 const client = new Twitter(keys.twitter);
 
@@ -100,14 +116,7 @@ if (!dataArr1[0]) {
 			if (err) {
 				return console.log('Error occurred: ' + err);
 			} else {
-				//const data_parsed = data.map(items =>items.)
-				// data.forEach(function(element){
-				// console.log(element);	
-				// })
-				//console.log(data.tracks.items[0]);
-
-				//console.log("length of data track: ", data.tracks.items.length);
-
+				
 
 				for (var i = 0; i < data.tracks.items.length; i++){
 					console.log("**************************");
