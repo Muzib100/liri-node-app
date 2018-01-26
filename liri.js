@@ -135,13 +135,15 @@ if (!dataArr1[0]) {
 		request(queryUrl, function(error, response, body) {
 
   		if (!error && response.statusCode === 200) {
+  			// pretty = JSON.stringify(JSON.parse(body), null, 4);
+  			// console.log(pretty);
     		
     		console.log( "*******************************************");
     		console.log("Title of the movie: " + JSON.parse(body).Title);
 		    console.log("Release Year: " + JSON.parse(body).Year);
 		    console.log("IMDB Rating:" + JSON.parse(body).imdbRating);
 		    console.log("Rotten Tomatoes Rating:" + JSON.parse(body).tomatoRating);
-		    console.log("Rotten Tomatoes URL: " + body.tomatoURL);
+		    console.log("Rotten Tomatoes URL: " + JSON.parse(body).tomatoURL);
 		    console.log("Country of Production: " + JSON.parse(body).Country);
 		    console.log("Language of the movie: " + JSON.parse(body).Language);
 		    console.log("Plot of the movie: " + JSON.parse(body).Plot);
