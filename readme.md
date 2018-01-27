@@ -19,7 +19,7 @@ To access the data, appropriate keys were procured by creating developer account
 
 Users could use the following commands at their terminals:
 1)	For tweets: node liri my-tweets.  This will show the last 20 tweets with dates of creation.
-2)	For info on songs:  node liri spotify-this-song <song name here>. This will show the following information about the song.
+2)	For info on songs:  node liri spotify-this-song,<song name here>. This will show the following information about the song.
 - Artist(s)
 - The song's name 
 - A preview link of the song from Spotify 
