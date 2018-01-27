@@ -41,6 +41,8 @@ If no song name is provided then the program will default to show info about the
 
 4)	If the user types in: node liri.js do-what-it-says. LIRI bot will read the text file Random.txt and extract the information requested in the next file. 
 
+5) Also, a file somefile.tx is created to store all the console.log info.
+
     
 ## Author
 
